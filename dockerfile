@@ -30,7 +30,7 @@ RUN python -m nltk.downloader stopwords punkt
 
 COPY serve_v2.py /opt/program
 
-ENTRYPOINT ["gunicorn", "-b", ":8080", "--workers", "6", "--threads", "46, "serve_v2:app"]
+ENTRYPOINT ["gunicorn", "-b", ":8080", "--workers", "6", "--threads", "46", "serve:app"]
 
 
 
